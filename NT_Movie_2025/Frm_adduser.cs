@@ -174,6 +174,11 @@ namespace NT_Movie_2025
             dataGridView1.DataSource = dt;
             con.Close();
         }
+
+        private void txt_pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
         

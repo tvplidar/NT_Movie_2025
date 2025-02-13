@@ -77,7 +77,7 @@ namespace NT_Movie_2025
             {
                 movie_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 movie_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                movie_type_id.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                cmb_type.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 movie_name_type.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
                 btn_save.Enabled = false;
@@ -87,7 +87,7 @@ namespace NT_Movie_2025
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            sql = "INSERT INTO tbl_movie (movie_id, movie_name, movie_type_id, movie_name_type) VALUES ('" + movie_id.Text + "',N'" + movie_name.Text + "',N'" + movie_type_id.Text + "','" + movie_name_type.Text + "')";
+            sql = "INSERT INTO tbl_movie (movie_id, movie_name, movie_type_id, movie_name_type) VALUES ('" + movie_id.Text + "',N'" + movie_name.Text + "',N'" + cmb_type.Text + "','" + movie_name_type.Text + "')";
             con.Open();
             cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();
@@ -95,7 +95,7 @@ namespace NT_Movie_2025
             con.Close();
             Auto_id(); 
             movie_name.Text = "";
-            movie_type_id.Text = "";
+            cmb_type.Text = "";
             movie_name_type.Text = "";
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -111,7 +111,7 @@ namespace NT_Movie_2025
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@movie_id", movie_id.Text);
             cmd.Parameters.AddWithValue("@movie_name", movie_name.Text);
-            cmd.Parameters.AddWithValue("@typeid", movie_type_id.Text);
+            cmd.Parameters.AddWithValue("@typeid", cmb_type.Text);
             cmd.Parameters.AddWithValue("@nametype", movie_name_type.Text);
 
             cmd.ExecuteNonQuery();
@@ -119,7 +119,7 @@ namespace NT_Movie_2025
             con.Close();
             Auto_id();
             movie_name.Text = "";
-            movie_type_id.Text = "";
+            cmb_type.Text = "";
             movie_name_type.Text = "";
             btn_save.Enabled = true;
             movie_name.Select();
@@ -177,5 +177,7 @@ namespace NT_Movie_2025
 
 
         }
+
+      
     }
 }

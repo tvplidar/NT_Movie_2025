@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace NT_Movie_2025
 {
@@ -21,5 +23,16 @@ namespace NT_Movie_2025
         {
 
         }
+
+        private void Frm_login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            
+         }
+        }
     }
-}
+

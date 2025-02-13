@@ -30,7 +30,7 @@
         {
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,17 +55,18 @@
             this.txt_pass.TabIndex = 2;
             this.txt_pass.TextChanged += new System.EventHandler(this.txt_pass_TextChanged);
             // 
-            // button1
+            // btn_login
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(396, 499);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(252, 114);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_login.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.White;
+            this.btn_login.Location = new System.Drawing.Point(396, 499);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(252, 114);
+            this.btn_login.TabIndex = 3;
+            this.btn_login.Text = "Submit";
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // label1
             // 
@@ -109,11 +110,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_email);
             this.Name = "Frm_login";
             this.Text = "Frm_login";
+            this.Load += new System.EventHandler(this.Frm_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,7 +125,7 @@
 
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox txt_pass;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
