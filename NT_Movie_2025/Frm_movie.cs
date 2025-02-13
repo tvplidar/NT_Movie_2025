@@ -173,6 +173,9 @@ namespace NT_Movie_2025
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
+
+
+
         }
     }
 }
