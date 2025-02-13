@@ -87,7 +87,7 @@ namespace NT_Movie_2025
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            sql = "INSERT INTO tbl_movie VALUES ('" + movie_id.Text + "',N'" + movie_name.Text + "',N'" + movie_type_id.Text + "','" + movie_name_type.Text + "')";
+            sql = "INSERT INTO tbl_movie (movie_id, movie_name, movie_type_id, movie_name_type) VALUES ('" + movie_id.Text + "',N'" + movie_name.Text + "',N'" + movie_type_id.Text + "','" + movie_name_type.Text + "')";
             con.Open();
             cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();
@@ -130,7 +130,19 @@ namespace NT_Movie_2025
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            con.Open();
+            sql = "DELETE tbl_movie WHERE Movie_id='" + movie_id.Text + "'";
+            cmd = new SqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
 
+
+            con.Close();
+            Auto_id();
+            btn_save.Enabled = true;
+            movie_name.Select();
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

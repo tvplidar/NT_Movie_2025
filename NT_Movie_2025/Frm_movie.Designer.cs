@@ -59,7 +59,7 @@
             // 
             this.movie_name.BackColor = System.Drawing.Color.Cornsilk;
             this.movie_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.movie_name.Location = new System.Drawing.Point(280, 129);
+            this.movie_name.Location = new System.Drawing.Point(282, 129);
             this.movie_name.Name = "movie_name";
             this.movie_name.Size = new System.Drawing.Size(421, 62);
             this.movie_name.TabIndex = 1;
