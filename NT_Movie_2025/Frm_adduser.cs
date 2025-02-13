@@ -95,6 +95,7 @@ namespace NT_Movie_2025
             con.Close();
             Auto_id();
             txt_name.Text = "";
+            txt_mail.Text = "";
             txt_pass.Text = "";
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -118,6 +119,7 @@ namespace NT_Movie_2025
             con.Close();
             Auto_id();
             txt_name.Text = "";
+            txt_mail.Text = "";
             txt_pass.Text = "";
             btn_save.Enabled = true;
             txt_name.Select();

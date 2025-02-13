@@ -52,7 +52,7 @@
             this.movie_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movie_id.Location = new System.Drawing.Point(280, 36);
             this.movie_id.Name = "movie_id";
-            this.movie_id.Size = new System.Drawing.Size(421, 75);
+            this.movie_id.Size = new System.Drawing.Size(421, 62);
             this.movie_id.TabIndex = 0;
             // 
             // movie_name
@@ -61,25 +61,25 @@
             this.movie_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movie_name.Location = new System.Drawing.Point(280, 129);
             this.movie_name.Name = "movie_name";
-            this.movie_name.Size = new System.Drawing.Size(421, 75);
+            this.movie_name.Size = new System.Drawing.Size(421, 62);
             this.movie_name.TabIndex = 1;
             // 
             // movie_type_id
             // 
             this.movie_type_id.BackColor = System.Drawing.Color.Cornsilk;
             this.movie_type_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.movie_type_id.Location = new System.Drawing.Point(280, 327);
+            this.movie_type_id.Location = new System.Drawing.Point(280, 220);
             this.movie_type_id.Name = "movie_type_id";
-            this.movie_type_id.Size = new System.Drawing.Size(421, 75);
+            this.movie_type_id.Size = new System.Drawing.Size(421, 62);
             this.movie_type_id.TabIndex = 2;
             // 
             // movie_name_type
             // 
             this.movie_name_type.BackColor = System.Drawing.Color.Cornsilk;
             this.movie_name_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.movie_name_type.Location = new System.Drawing.Point(280, 228);
+            this.movie_name_type.Location = new System.Drawing.Point(280, 318);
             this.movie_name_type.Name = "movie_name_type";
-            this.movie_name_type.Size = new System.Drawing.Size(421, 75);
+            this.movie_name_type.Size = new System.Drawing.Size(421, 62);
             this.movie_name_type.TabIndex = 3;
             // 
             // label4
@@ -89,7 +89,7 @@
             this.label4.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label4.Location = new System.Drawing.Point(106, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 48);
+            this.label4.Size = new System.Drawing.Size(124, 42);
             this.label4.TabIndex = 26;
             this.label4.Text = "ລະຫັດໜັງ:";
             // 
@@ -103,6 +103,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(805, 144);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // label5
             // 
@@ -111,7 +112,7 @@
             this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label5.Location = new System.Drawing.Point(162, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 48);
+            this.label5.Size = new System.Drawing.Size(76, 42);
             this.label5.TabIndex = 43;
             this.label5.Text = "ຊື່ໜັງ:";
             // 
@@ -120,9 +121,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(23, 338);
+            this.label1.Location = new System.Drawing.Point(42, 229);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 48);
+            this.label1.Size = new System.Drawing.Size(194, 42);
             this.label1.TabIndex = 44;
             this.label1.Text = "ລະຫັດປະເພດໜັງ:";
             // 
@@ -131,9 +132,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(79, 239);
+            this.label2.Location = new System.Drawing.Point(83, 328);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 48);
+            this.label2.Size = new System.Drawing.Size(146, 42);
             this.label2.TabIndex = 45;
             this.label2.Text = "ຊື່ປະເພດໜັງ:";
             // 
@@ -148,6 +149,7 @@
             this.btn_delete.TabIndex = 49;
             this.btn_delete.Text = "ລົບຂໍ້ມູນ";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -161,6 +163,7 @@
             this.btn_update.Tag = "";
             this.btn_update.Text = "ແກ້ໄຂຂໍ້ມູນ";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_save
             // 
@@ -173,6 +176,7 @@
             this.btn_save.TabIndex = 47;
             this.btn_save.Text = "ບັນທຶກຂໍ້ມູນ";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_show
             // 
@@ -183,8 +187,9 @@
             this.btn_show.Name = "btn_show";
             this.btn_show.Size = new System.Drawing.Size(194, 90);
             this.btn_show.TabIndex = 46;
-            this.btn_show.Text = "ເພີ່ມຂໍ້ມູນ";
+            this.btn_show.Text = "ສະແດງຂໍ້ມູນ";
             this.btn_show.UseVisualStyleBackColor = false;
+            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
             // btn_search
             // 
@@ -203,12 +208,12 @@
             this.textBox1.Font = new System.Drawing.Font("Phetsarath OT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(746, 129);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 96);
+            this.textBox1.Size = new System.Drawing.Size(220, 83);
             this.textBox1.TabIndex = 50;
             // 
             // Frm_movie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1006, 683);
