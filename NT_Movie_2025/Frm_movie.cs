@@ -144,5 +144,35 @@ namespace NT_Movie_2025
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            sql = "SELECT Movie_id as 'ລະຫັດ', Movie_name as 'ຊື່ຫນັງ', " +
+                " Movie_type_id as 'ລະຫັດຫນັງ',Movie_name_type as 'ຊື່ປະເພດ'" +
+                " FROM tbl_movie WHERE Movie_name LIKE N'%"
+                + txt_search.Text + "%' or Movie_name_type LIKE N'%" + txt_search.Text + "%'";
+            cmd = new SqlCommand(sql, con);
+            da = new SqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            sql = "SELECT Movie_id as 'ລະຫັດ', Movie_name as 'ຊື່ຫນັງ', " +
+                " Movie_type_id as 'ລະຫັດຫນັງ',Movie_name_type as 'ຊື່ປະເພດ'" +
+                " FROM tbl_movie WHERE Movie_name LIKE N'%"
+                + txt_search.Text + "%' or Movie_name_type LIKE N'%" + txt_search.Text + "%'";
+            cmd = new SqlCommand(sql, con);
+            da = new SqlDataAdapter(sql, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
     }
 }

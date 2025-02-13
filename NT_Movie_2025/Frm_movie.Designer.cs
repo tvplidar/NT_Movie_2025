@@ -42,7 +42,7 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_show = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,15 +201,17 @@
             this.btn_search.TabIndex = 51;
             this.btn_search.Text = "ຄົ້ນຫາ";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // textBox1
+            // txt_search
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FloralWhite;
-            this.textBox1.Font = new System.Drawing.Font("Phetsarath OT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(746, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 83);
-            this.textBox1.TabIndex = 50;
+            this.txt_search.BackColor = System.Drawing.Color.FloralWhite;
+            this.txt_search.Font = new System.Drawing.Font("Phetsarath OT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(746, 129);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(220, 83);
+            this.txt_search.TabIndex = 50;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // Frm_movie
             // 
@@ -218,7 +220,7 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1006, 683);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_search);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_save);
@@ -258,6 +260,6 @@
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_show;
         private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_search;
     }
 }
