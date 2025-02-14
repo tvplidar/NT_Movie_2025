@@ -16,7 +16,7 @@ namespace NT_Movie_2025
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_movie());
+            Application.Run(new Frm_login());
         }
     }
 }

@@ -84,7 +84,7 @@
             this.label4.Location = new System.Drawing.Point(109, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 49);
+            this.label4.Size = new System.Drawing.Size(149, 48);
             this.label4.TabIndex = 26;
             this.label4.Text = "ລະຫັດໜັງ:";
             // 
@@ -252,6 +252,7 @@
             this.Controls.Add(this.movie_id);
             this.Name = "Frm_movie";
             this.Text = "Frm_movie";
+            this.Load += new System.EventHandler(this.Frm_movie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

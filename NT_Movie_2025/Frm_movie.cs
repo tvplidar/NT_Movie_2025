@@ -178,6 +178,9 @@ namespace NT_Movie_2025
 
         }
 
-      
+        private void Frm_movie_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
