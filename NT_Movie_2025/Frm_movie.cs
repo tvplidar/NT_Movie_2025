@@ -17,6 +17,7 @@ namespace NT_Movie_2025
         {
             InitializeComponent();
             Auto_id();
+            load_id();
         }
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-CUPFRMS; " +
            "Initial Catalog=NT_Movie_2025; Integrated Security=SSPI;");
@@ -177,10 +178,39 @@ namespace NT_Movie_2025
 
 
         }
-
-        private void Frm_movie_Load(object sender, EventArgs e)
+        public void load_id()
         {
-
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            sql = "SELECT * FROM tbl_movie_type";
+            cmd = new SqlCommand(sql, con);
+            da = new SqlDataAdapter(sql, con);
+            cmd.CommandType = CommandType.Text;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmb_type.DataSource = dt;
+            cmb_type.DisplayMember = "Movie_type_id";
+            cmb_type.ValueMember = "Movie_type_id";
+            con.Close();
+        }
+        private void cmb_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            cmd = new SqlCommand("SELECT * FROM tbl_movie_type WHERE Movie_type_id='" + cmb_type.Text + "'", con);
+            cmd.ExecuteNonQuery();
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string name = (string)dr["Movie_name_type"].ToString();
+                movie_name_type.Text = name;
+               
+            }
+            con.Close();
         }
     }
 }
